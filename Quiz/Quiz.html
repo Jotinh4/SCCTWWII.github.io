@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz</title>
+  <link rel="stylesheet" href="Quiz.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Quiz sobre a Segunda Guerra</h1>
+    <div id="quiz"></div>
+    <div id="result" class="result"></div>
+    <button id="submit" class="button">Enviar</button>
+    <button id="retry" class="button hide">Repetir</button>
+    <button id="showAnswer" class="button hide" onclick="start(), stop()">Mostrar Respostas</button>
+    <button id="back" class="button" onclick="goBack()">Voltar</button>
+  </div>
+  <script src="Quiz.js"></script>
+  <script>
+    const start = () => {
+      setTimeout(function() {
+        confetti.start();
+      } ,0);
+    };
+
+    const stop = () => {
+      setTimeout(function() {
+        confetti.stop();
+      } ,10000);
+    };
+  </script>
+</body>
+</html>
